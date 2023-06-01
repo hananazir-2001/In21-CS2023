@@ -1,7 +1,9 @@
 #include <iostream>
 #include <limits.h>
 
-#define V 6 // number of vertices in the graph
+// number of vertices in the graph
+#define V 6 
+
 
 using namespace std;
 // function to get the minimum time
@@ -58,6 +60,7 @@ void dijkstra(int graph[V][V], int start) {
 
 
 int main() {
+    // adjacency matrix representation of the graph
     int graph[V][V] = {
         {0, 10, 0, 0, 15, 5},
         {10, 0, 10, 30, 0, 0},
@@ -65,23 +68,23 @@ int main() {
         {0, 30, 12, 0, 0, 20},
         {15, 0, 5, 0, 0, 0},
         {5, 0, 0, 20, 0, 0}
-    }; // adjacency matrix representation of the graph
-    // find shortest path and its weight starting from vertex 0
+    }; 
+    // find shortest path time and its weight starting from vertex 0
     //cout<<"from city "<<0<<endl;
-    //dijkstra(graph, 0); // find shortest path and its weight starting from vertex 0
-    // find shortest path and its weight starting from vertex 1
+    //dijkstra(graph, 0); 
+    // find shortest path time and its weight starting from vertex 1
     //cout<<"from city "<<1<<endl;
     //dijkstra(graph, 1);
-    // find shortest path and its weight starting from vertex 2
+    // find shortest path time and its weight starting from vertex 2
    //cout<<"from city "<<2<<endl;
     //dijkstra(graph, 2);
-    // find shortest path and its weight starting from vertex 3
+    // find shortest path time and its weight starting from vertex 3
     //cout<<"from city "<<3<<endl;
     //dijkstra(graph, 3);
-    // find shortest path and its weight starting from vertex 4
+    // find shortest path time and its weight starting from vertex 4
     //cout<<"from city "<<4<<endl;
     //dijkstra(graph, 4);
-    // find shortest path and its weight starting from vertex 5
+    // find shortest path time and its weight starting from vertex 5
     cout<<"from city "<<5<<endl;
     dijkstra(graph, 5);
     return 0;
