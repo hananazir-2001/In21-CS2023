@@ -17,7 +17,7 @@ int minTime_taken(int Time[], bool visited[]) {
  
     return min_index;
 }
-
+// implement dijkstra algorithm
 void dijkstra(int graph[V][V], int start) {
     int Time[V]; // array to store shortest distance from start to i
     bool visited[V]; // array to keep track of visited vertices
@@ -42,14 +42,13 @@ void dijkstra(int graph[V][V], int start) {
         }
     }
      double total_time =0;
-    //cout << "Vertex \t Distance from Start\n";
-     //for (int i = 0; i < 6; i++){
-     //cout<<"from node "<<i<<endl;
+    // print the time taken from each city to destination city
     for (int i = 0; i < V; i++) {
         cout<< "Time taken to city "<< i <<" = ";
         cout <<Time[i] << endl;
         total_time+=Time[i];
     }
+    // calculate the total time and get the average time
     cout<< "total_time =  "<< total_time<<endl;
     
     double average =  total_time/5;
@@ -67,16 +66,22 @@ int main() {
         {15, 0, 5, 0, 0, 0},
         {5, 0, 0, 20, 0, 0}
     }; // adjacency matrix representation of the graph
+    // find shortest path and its weight starting from vertex 0
     //cout<<"from city "<<0<<endl;
     //dijkstra(graph, 0); // find shortest path and its weight starting from vertex 0
+    // find shortest path and its weight starting from vertex 1
     //cout<<"from city "<<1<<endl;
     //dijkstra(graph, 1);
+    // find shortest path and its weight starting from vertex 2
    //cout<<"from city "<<2<<endl;
     //dijkstra(graph, 2);
+    // find shortest path and its weight starting from vertex 3
     //cout<<"from city "<<3<<endl;
     //dijkstra(graph, 3);
+    // find shortest path and its weight starting from vertex 4
     //cout<<"from city "<<4<<endl;
     //dijkstra(graph, 4);
+    // find shortest path and its weight starting from vertex 5
     cout<<"from city "<<5<<endl;
     dijkstra(graph, 5);
     return 0;
